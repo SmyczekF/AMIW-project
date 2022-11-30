@@ -1,1 +1,26 @@
-Licznik: {{counter}}
+<!-- <p>
+    Licznik: {{counter}}
+</p>
+
+<button (click)="reset()">Wyzeruj</button>
+
+<div>
+    <input type="text" value="{{counter}}">
+    <input type="text" [value]="counter "(keyup.enter)="update($event)">
+    <input type="text" [(ngModel)] = "counter">
+</div> -->
+<div>
+    <h2>Word to catch: "{{toGuess}}"</h2>
+    <input type="text" [value]="chosenWord" readonly>
+</div>
+<div>
+    <button (click)="checkResult()">CATCH!</button>
+    <h3>Score: {{score}}</h3>
+</div>
+
+
+<div id = 'endInfoPanel' [style.visibility]="isPanelVisible? 'visible' : 'hidden'">
+    <h1 class = 'endInfo' [style.visibility]="isVictoryVisible ? 'visible' : 'hidden'">YOU WON!<br/>Try again</h1>
+    <h1 class = 'endInfo' [style.visibility]="isFailureVisible ? 'visible' : 'hidden'">YOU LOST!<br/>Try again</h1>
+</div>
+
